@@ -15,7 +15,8 @@ const minters = [
     { name: "xc03", publicKey: "45ea678c97460a900b048729a4c4c4cf922b0e3dc9dec38bff7af78a580264ee" },
     { name: "xc04", publicKey: "a969a7cf4f9b11df9922c98f941c8cf925f6bdb1699e4177e2c9e543d5af59cc" },
     { name: "ken_01", publicKey: "6e3bfa53116ac247fe3f8a8eead4395b3603937763828f5cbc9a9e61e29a6cdd" },
-    { name: "ken_02", publicKey: "0e9275328a1c1ecc94a6f867a02c5c09ef8e0d628e8147fb61a484cfe4d88b70" }
+    { name: "ken_02", publicKey: "0e9275328a1c1ecc94a6f867a02c5c09ef8e0d628e8147fb61a484cfe4d88b70" },
+    { name: "brocktest", publicKey: "69cf25fc6744dee458382694f5d8561c74d72b774dbfa5d3374209a0fb9cc76e" }
 ];
 const kNodeServer = "http://59.110.136.11:4096";
 const kStartTime = new Date(Date.UTC(2018, 9, 12, 12, 0, 0, 0));
@@ -72,10 +73,11 @@ function main() {
         }
     })()
         .then(result => {
-
+            void result;
+            console.log("Finished.");
         })
         .catch(error => {
-
+            console.log("Exception:", error);
         });
 }
 
